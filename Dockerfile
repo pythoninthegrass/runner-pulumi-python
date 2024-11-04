@@ -54,8 +54,6 @@ ENV PULUMI_SKIP_CONFIRMATIONS=true
 ENV PULUMI_SKIP_UPDATE_CHECK=true
 ENV NO_COLOR=true
 
-RUN pulumi plugin install resource aws
-
 VOLUME ["/mnt/workspace/source"]
 
 USER spacelift
