@@ -1,0 +1,14 @@
+failure-threshold: info   # error|warning|info|style|ignore|none
+
+ignored:
+  - DL3006                # explicit tag
+  - DL3008                # pin versions in apt
+  - DL3013                # pin versions in pip
+  - DL3018                # pin versions in apk
+  - DL3026                # allowed registry
+  - DL3042                # pip cache directory
+
+trustedRegistries:
+  - docker.io
+  - "*.gcr.io"
+  - localhost:32000
