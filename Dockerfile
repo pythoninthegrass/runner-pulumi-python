@@ -42,7 +42,11 @@ FROM public.ecr.aws/spacelift/runner-pulumi-python:v3.137.0 as runner
 
 ARG HOME="/home/spacelift"
 ARG VENV="/opt/venv"
-ENV PATH="${VENV}/bin:${HOME}/.local/bin:$PATH"
+ENV VIRTUAL_ENV=$VENV
+ENV PATH="${VIRTUAL_ENV}/bin:${HOME}/.local/bin:$PATH"
+
+ENV POETRY_VIRTUALENVS_CREATE=false
+ENV POETRY_VIRTUALENVS_IN_PROJECT=true
 
 COPY --from=builder $VENV $VENV
 
