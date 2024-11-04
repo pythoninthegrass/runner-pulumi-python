@@ -50,6 +50,14 @@ ENV POETRY_VIRTUALENVS_IN_PROJECT=true
 
 COPY --from=builder $VENV $VENV
 
+ENV PULUMI_SKIP_CONFIRMATIONS=true
+ENV PULUMI_SKIP_UPDATE_CHECK=true
+ENV NO_COLOR=true
+
+RUN pulumi plugin install resource aws
+
+VOLUME ["/mnt/workspace/source"]
+
 CMD ["sleep", "infinity"]
 
 LABEL org.opencontainers.image.title="runner-pulumi-python"
