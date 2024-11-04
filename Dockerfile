@@ -58,6 +58,8 @@ RUN pulumi plugin install resource aws
 
 VOLUME ["/mnt/workspace/source"]
 
+USER spacelift
+
 CMD ["sleep", "infinity"]
 
 LABEL org.opencontainers.image.title="runner-pulumi-python"
