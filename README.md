@@ -1,6 +1,6 @@
 # runner-pulumi-python
 
-Public fork of Spacelift's [Python ECR image](https://docs.spacelift.io/vendors/pulumi/python).
+Public fork of Spacelift's [Pulumi Python ECR image](https://docs.spacelift.io/vendors/pulumi/python).
 
 ## Differences
 
