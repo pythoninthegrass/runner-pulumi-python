@@ -7,6 +7,7 @@ ignored:
   - DL3018                # pin versions in apk
   - DL3026                # allowed registry
   - DL3042                # pip cache directory
+  - SC1091                # shellcheck source
 
 trustedRegistries:
   - docker.io
